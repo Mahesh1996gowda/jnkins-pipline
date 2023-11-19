@@ -1,3 +1,24 @@
 pipeline {
-
+agent any
+stages{
+stage { ('Build')
+steps {
+echo "this step is Build step"
+}
+}
+}
+stages{
+stage { ('Deploy')
+steps {
+echo "this step is deploy step"
+}
+}
+}
+stages{
+stage { ('test')
+steps {
+echo "this step is test step"
+}
+}
+}
 }
