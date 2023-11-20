@@ -1,17 +1,20 @@
 pipeline {
-agent any
+agent none
 stages {
 stage ('Build') {
+agent {label 'node3'}
 steps {
 echo "this step is Build step"
 }
 }
 stage ('Deploy') {
+agent {label 'node3'}
 steps {
 echo "this step is deploy step"
 }
 }
 stage ('test') {
+agent {label 'node3'}
 steps {
 echo "this step is test step"
 }
